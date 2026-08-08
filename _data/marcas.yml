@@ -25,8 +25,13 @@
   logo: toten.png
 - name: YOFC
   logo: yofc.png
-- name: APC
-- name: Dahua
+- name: APC by Schneider Electric
+  logo: apc.png
+- name: Dahua Technology
+  logo: dahua.png
 - name: ZKTeco
-- name: Dexon
+  logo: zkteco.png
+- name: Dexson (Schneider Electric)
+  logo: dexson.png
 - name: Kaise
+  logo: kaise.png
