@@ -98,7 +98,13 @@ description: >-
     </div>
     <ul class="brand-logos">
       {% for marca in site.data.marcas %}
-      <li><img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50"></li>
+      <li>
+        {% if marca.logo %}
+        <img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50">
+        {% else %}
+        <span class="brand-text">{{ marca.name }}</span>
+        {% endif %}
+      </li>
       {% endfor %}
     </ul>
   </div>

@@ -1,5 +1,6 @@
 # Marcas de equipos y materiales con los que trabaja AYB Technology & Services.
 # Logos extraídos del brochure corporativo oficial de la empresa.
+# Las marcas sin campo "logo" se muestran como texto hasta tener el archivo de imagen.
 - name: Panduit
   logo: panduit.png
 - name: Cisco
@@ -18,11 +19,14 @@
   logo: aruba-hpe.png
 - name: Belden
   logo: belden.png
-- name: Siklu
-  logo: siklu.png
 - name: Hikvision
   logo: hikvision.png
 - name: Toten
   logo: toten.png
 - name: YOFC
   logo: yofc.png
+- name: APC
+- name: Dahua
+- name: ZKTeco
+- name: Dexon
+- name: Kaise
