@@ -1,0 +1,161 @@
+---
+layout: default
+title: "Cableado Estructurado, Fibra Óptica y Seguridad Electrónica en Perú"
+permalink: /
+description: >-
+  AYB Technology & Services SAC: cableado estructurado, fibra óptica,
+  instalaciones eléctricas, pozos a tierra, cámaras CCTV, control de acceso
+  y radioenlaces para empresas en Lima y todo el Perú. Cotiza hoy.
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="kicker">Telecomunicaciones · Seguridad Electrónica · Perú</p>
+      <h1>Infraestructura de redes y seguridad electrónica para tu empresa</h1>
+      <p class="hero-lead">
+        Diseñamos, instalamos y certificamos cableado estructurado, fibra
+        óptica, instalaciones eléctricas, pozos a tierra, cámaras de
+        seguridad, control de acceso y radioenlaces. Un solo proveedor para
+        toda tu infraestructura, con ingenieros colegiados y respaldo de
+        marcas líderes del mercado.
+      </p>
+      <div class="hero-actions">
+        <a href="https://wa.me/{{ site.company.whatsapp_number }}?text=Hola%20AYB%2C%20quisiera%20cotizar%20un%20servicio" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+          Cotiza por WhatsApp
+        </a>
+        <a href="/servicios/" class="btn btn-outline-light btn-lg">Ver servicios</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge"><svg width="20" height="20"><use href="#icon-award"/></svg> Ingenieros colegiados (CIP)</span>
+        <span class="hero-badge"><svg width="20" height="20"><use href="#icon-shield"/></svg> Certificación Fluke Networks</span>
+        <span class="hero-badge"><svg width="20" height="20"><use href="#icon-pin"/></svg> Cobertura en todo el Perú</span>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <h2>¿Qué necesitas resolver hoy?</h2>
+      <ul>
+        <li><svg width="18" height="18"><use href="#icon-check"/></svg> Instalar o ampliar mi red de datos y fibra óptica</li>
+        <li><svg width="18" height="18"><use href="#icon-check"/></svg> Certificar mi cableado con normativa internacional</li>
+        <li><svg width="18" height="18"><use href="#icon-check"/></svg> Poner cámaras de seguridad en mi negocio o casa</li>
+        <li><svg width="18" height="18"><use href="#icon-check"/></svg> Controlar el acceso de personal y visitantes</li>
+        <li><svg width="18" height="18"><use href="#icon-check"/></svg> Construir o certificar un pozo a tierra</li>
+      </ul>
+      <a href="/contacto/" class="btn btn-primary btn-block" style="margin-top:20px;">Solicitar visita técnica</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Nuestros servicios</p>
+      <h2>Soluciones integrales en telecomunicaciones y seguridad</h2>
+      <p>Un equipo especializado para cada etapa de tu proyecto: diseño, instalación, certificación y mantenimiento.</p>
+    </div>
+    <div class="card-grid">
+      {% assign servicios = site.servicios | sort: "order" %}
+      {% for s in servicios %}
+      <a class="service-card" href="{{ s.url }}">
+        <svg width="30" height="30" aria-hidden="true"><use href="#{{ s.icon }}"/></svg>
+        <h3>{{ s.nav_title }}</h3>
+        <p>{{ s.excerpt }}</p>
+        <span class="card-link">Ver servicio <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Soluciones por escenario</p>
+      <h2>Seguridad electrónica para hogar, exteriores y empresas</h2>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-home"/></svg></div>
+        <h3>Soluciones para hogar</h3>
+        <p>¿Sabe qué sucede en casa cuando usted no está?</p>
+        <ul>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Supervise a niños o adultos mayores</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Identifique antes de abrir su puerta</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Escuche lo que pasa en vivo</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Grabación las 24 horas</li>
+        </ul>
+      </div>
+      <div class="solution-card">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-tree"/></svg></div>
+        <h3>Soluciones para exteriores</h3>
+        <p>Control de zoom y movimiento con tecnología full HD.</p>
+        <ul>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Equipos duraderos para trabajo diario</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Fácil manejo para uso profesional</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Respaldo de marcas líderes del mundo</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Garantía de óptimo funcionamiento</li>
+        </ul>
+      </div>
+      <div class="solution-card">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-building"/></svg></div>
+        <h3>Soluciones para negocios</h3>
+        <p>Ten el control de tu empresa en tus manos.</p>
+        <ul>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Evita el robo de mercadería</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Control de personal</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Archivo de eventos siempre disponible</li>
+          <li><svg width="16" height="16"><use href="#icon-check"/></svg> Disuasivo contra asaltos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Por qué elegirnos</p>
+      <h2>Respaldo técnico real, no solo promesas</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-award"/></svg></div>
+        <h3>Ingenieros colegiados</h3>
+        <p>Certificaciones firmadas por ingenieros electricistas habilitados por el CIP.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-shield"/></svg></div>
+        <h3>Normativa internacional</h3>
+        <p>Instalaciones bajo ANSI/TIA/EIA-568-C, TSB-67 e Indeci.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-rack"/></svg></div>
+        <h3>Equipos de marca</h3>
+        <p>Trabajamos con Panduit, Cisco, Fluke Networks, Siemon, Hikvision y más.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-team"/></svg></div>
+        <h3>Un solo proveedor</h3>
+        <p>Redes, electricidad y seguridad electrónica en un mismo equipo técnico.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Nuestros equipos</p>
+      <h2>Trabajamos con marcas líderes del mercado</h2>
+    </div>
+    <ul class="brand-chips">
+      {% for marca in site.data.marcas %}
+      <li>{{ marca }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include cta-banner.html %}

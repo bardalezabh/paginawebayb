@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Servicios de Telecomunicaciones y Seguridad Electrónica"
+permalink: /servicios/
+description: >-
+  Cableado estructurado y fibra óptica, instalaciones eléctricas, pozos a
+  tierra, cámaras CCTV, control de acceso y radioenlaces. Conoce todos los
+  servicios de AYB Technology & Services en Lima y Perú.
+---
+
+<header class="page-hero">
+  <div class="container">
+    {% include breadcrumbs.html %}
+    <p class="kicker">Servicios</p>
+    <h1>Portafolio de servicios en telecomunicaciones y seguridad electrónica</h1>
+    <p class="hero-lead">
+      Diseño, instalación, certificación y mantenimiento para empresas,
+      instituciones públicas y hogares en todo el Perú.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="card-grid">
+      {% assign servicios = site.servicios | sort: "order" %}
+      {% for s in servicios %}
+      <a class="service-card" href="{{ s.url }}">
+        <svg width="30" height="30" aria-hidden="true"><use href="#{{ s.icon }}"/></svg>
+        <h3>{{ s.nav_title }}</h3>
+        <p>{{ s.excerpt }}</p>
+        <span class="card-link">Ver servicio <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Cómo trabajamos</p>
+      <h2>De la visita técnica a la certificación final</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-phone"/></svg></div>
+        <h3>1. Diagnóstico</h3>
+        <p>Evaluamos tu necesidad actual y proyectamos el crecimiento futuro de la instalación.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-rack"/></svg></div>
+        <h3>2. Diseño</h3>
+        <p>Proponemos la solución técnica y los materiales adecuados según normativa.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-bolt"/></svg></div>
+        <h3>3. Instalación</h3>
+        <p>Ejecutamos el proyecto con ingenieros y técnicos especializados.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-award"/></svg></div>
+        <h3>4. Certificación</h3>
+        <p>Entregamos protocolos de prueba y certificación de tu instalación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include cta-banner.html %}

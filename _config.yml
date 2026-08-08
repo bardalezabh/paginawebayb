@@ -1,0 +1,107 @@
+# ------------------------------------------------------------------
+# Configuración del sitio — AYB Technology & Services SAC
+# ------------------------------------------------------------------
+title: "AYB Technology & Services"
+tagline: "Cableado Estructurado, Fibra Óptica, Seguridad Electrónica y Energía"
+description: >-
+  AYB Technology & Services SAC es una empresa peruana especializada en
+  cableado estructurado, fibra óptica, instalaciones eléctricas, pozos a
+  tierra, cámaras de seguridad CCTV, control de acceso y radioenlaces para
+  empresas y el sector público en todo el Perú.
+
+# URL canónica de producción (ajustar si cambia el dominio)
+url: "https://aybts.com"
+baseurl: ""
+
+lang: es-PE
+locale: es_PE
+timezone: America/Lima
+
+# Datos de la empresa (NAP — Name, Address, Phone) usados en layouts,
+# includes y datos estructurados (schema.org). Mantener consistentes con
+# Google Business Profile para SEO local.
+company:
+  legal_name: "AYB Technology & Services SAC"
+  short_name: "AYB Technology & Services"
+  founded: "2023"
+  phone_display: "916 033 589"
+  phone_e164: "+51916033589"
+  whatsapp_number: "51916033589"
+  email: "abel.bardalez@aybts.com"
+  address:
+    street: "Avenida Javier Prado Oeste 757"
+    district: "Magdalena del Mar"
+    city: "Lima"
+    region: "Lima"
+    country: "PE"
+    postal_code: ""
+  geo:
+    lat: -12.0921
+    lng: -77.0716
+  hours: "Lunes a viernes, 9:00 am – 6:00 pm"
+  # Cuando existan las cuentas, agregar aquí, p. ej.:
+  # social:
+  #   - { platform: "facebook", url: "https://facebook.com/aybts" }
+  #   - { platform: "instagram", url: "https://instagram.com/aybts" }
+  social: []
+
+# Enlaces de navegación principal
+nav:
+  - title: "Inicio"
+    url: "/"
+  - title: "Nosotros"
+    url: "/nosotros/"
+  - title: "Servicios"
+    url: "/servicios/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Contacto"
+    url: "/contacto/"
+
+# ------------------------------------------------------------------
+# Colecciones
+# ------------------------------------------------------------------
+collections:
+  servicios:
+    output: true
+    permalink: /servicios/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "servicios"
+    values:
+      layout: "servicio"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      image: "/assets/img/og-cover.png"
+
+# ------------------------------------------------------------------
+# SEO / plugins
+# ------------------------------------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+logo: "/assets/img/logo.png"
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - "*.pdf"
+
+permalink: /blog/:title/

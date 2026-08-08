@@ -1,0 +1,40 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricianContractor",
+  "@id": "{{ site.url }}/#organization",
+  "name": "{{ site.company.legal_name }}",
+  "alternateName": "{{ site.company.short_name }}",
+  "url": "{{ site.url }}/",
+  "logo": "{{ site.url }}{{ site.logo }}",
+  "image": "{{ site.url }}{{ site.logo }}",
+  "description": "{{ site.description | strip_newlines }}",
+  "telephone": "{{ site.company.phone_e164 }}",
+  "email": "{{ site.company.email }}",
+  "foundingDate": "{{ site.company.founded }}",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.company.address.street }}",
+    "addressLocality": "{{ site.company.address.district }}",
+    "addressRegion": "{{ site.company.address.region }}",
+    "addressCountry": "PE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.company.geo.lat }},
+    "longitude": {{ site.company.geo.lng }}
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Perú"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "sameAs": [{% for s in site.company.social %}"{{ s.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</script>

@@ -1,0 +1,114 @@
+---
+layout: default
+title: "Contacto"
+permalink: /contacto/
+description: >-
+  Contáctanos por WhatsApp, teléfono o correo. Av. Javier Prado Oeste 757,
+  Magdalena del Mar, Lima. Solicita una cotización de AYB Technology & Services.
+---
+
+<header class="page-hero">
+  <div class="container">
+    {% include breadcrumbs.html %}
+    <p class="kicker">Contacto</p>
+    <h1>Cuéntanos qué necesitas</h1>
+    <p class="hero-lead">Respondemos por WhatsApp, teléfono o correo. Cuéntanos tu proyecto y te enviamos una cotización.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container contact-layout">
+    <div>
+      <div class="contact-info-card">
+        <h2 style="margin-bottom:0;">Datos de contacto</h2>
+        <ul class="contact-info-list">
+          <li>
+            <div class="icon-circle"><svg width="20" height="20" aria-hidden="true"><use href="#icon-pin"/></svg></div>
+            <div>
+              <strong>Dirección</strong>
+              <span>{{ site.company.address.street }}, {{ site.company.address.district }}, {{ site.company.address.city }}</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle"><svg width="20" height="20" aria-hidden="true"><use href="#icon-phone"/></svg></div>
+            <div>
+              <strong>Teléfono / WhatsApp</strong>
+              <a href="tel:{{ site.company.phone_e164 }}">{{ site.company.phone_display }}</a>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle"><svg width="20" height="20" aria-hidden="true"><use href="#icon-mail"/></svg></div>
+            <div>
+              <strong>Correo</strong>
+              <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+            </div>
+          </li>
+          <li>
+            <div class="icon-circle"><svg width="20" height="20" aria-hidden="true"><use href="#icon-clock"/></svg></div>
+            <div>
+              <strong>Horario de atención</strong>
+              <span>{{ site.company.hours }}</span>
+            </div>
+          </li>
+        </ul>
+        <a href="https://wa.me/{{ site.company.whatsapp_number }}?text=Hola%20AYB%2C%20quisiera%20cotizar%20un%20servicio" class="btn btn-whatsapp btn-block" style="margin-top:22px;" target="_blank" rel="noopener">
+          <svg width="20" height="20" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q={{ site.company.address.street | url_encode }},+{{ site.company.address.district | url_encode }},+{{ site.company.address.city | url_encode }},+Peru&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de {{ site.company.short_name }}">
+        </iframe>
+      </div>
+    </div>
+
+    <div>
+      <h2>Solicita tu cotización</h2>
+      <p style="color:var(--gray-700)">Completa el formulario y se abrirá WhatsApp con tu mensaje listo para enviar directamente a nuestro equipo.</p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="company">Empresa (opcional)</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="service">Servicio de interés</label>
+          <select id="service" name="service" required>
+            <option value="">Selecciona un servicio</option>
+            {% assign servicios = site.servicios | sort: "order" %}
+            {% for s in servicios %}
+            <option value="{{ s.nav_title }}">{{ s.nav_title }}</option>
+            {% endfor %}
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" placeholder="Cuéntanos brevemente tu proyecto o necesidad" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-whatsapp btn-lg btn-block">
+          <svg width="20" height="20" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+          Enviar por WhatsApp
+        </button>
+        <p class="form-note">
+          También puedes escribirnos directamente a
+          <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

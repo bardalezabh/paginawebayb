@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<article class="service-page">
+  <header class="page-hero service-hero">
+    <div class="container">
+      {% include breadcrumbs.html %}
+      <p class="kicker">{{ page.hero_kicker | default: "Servicios" }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="hero-lead">{{ page.excerpt }}</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/{{ site.company.whatsapp_number }}?text=Hola%20AYB%2C%20quisiera%20cotizar%20{{ page.title | url_encode }}" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+          Cotizar este servicio
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container service-layout">
+    <div class="service-content">
+      {{ content }}
+    </div>
+
+    <aside class="service-sidebar">
+      <div class="sidebar-card">
+        <h3>Beneficios clave</h3>
+        <ul class="check-list">
+          {% for b in page.benefits %}
+          <li><svg width="18" height="18" aria-hidden="true"><use href="#icon-check"/></svg><span>{{ b }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="sidebar-card sidebar-cta">
+        <svg width="34" height="34" aria-hidden="true"><use href="#icon-shield"/></svg>
+        <h3>Ingenieros colegiados (CIP)</h3>
+        <p>Trabajos certificados y respaldados por profesionales habilitados por el Colegio de Ingenieros del Perú.</p>
+        <a href="tel:{{ site.company.phone_e164 }}" class="btn btn-outline btn-block">
+          <svg width="18" height="18" aria-hidden="true"><use href="#icon-phone"/></svg>
+          Llamar: {{ site.company.phone_display }}
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  {% if page.faq %}
+  <section class="faq-section">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-list">
+        {% for item in page.faq %}
+        <details class="faq-item">
+          <summary>{{ item.q }}</summary>
+          <p>{{ item.a }}</p>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.related %}
+  <section class="related-services">
+    <div class="container">
+      <h2>Servicios relacionados</h2>
+      <div class="card-grid">
+        {% for slug in page.related %}
+          {% assign rel = site.servicios | where: "slug", slug | first %}
+          {% if rel %}
+          <a class="service-card" href="{{ rel.url }}">
+            <svg width="30" height="30" aria-hidden="true"><use href="#{{ rel.icon }}"/></svg>
+            <h3>{{ rel.nav_title }}</h3>
+            <p>{{ rel.excerpt }}</p>
+            <span class="card-link">Ver servicio <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% include cta-banner.html %}
+</article>

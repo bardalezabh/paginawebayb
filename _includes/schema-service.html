@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": {{ page.title | jsonify }},
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | strip_newlines | jsonify }},
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.company.legal_name }}",
+    "url": "{{ site.url }}/"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Perú"
+  },
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>

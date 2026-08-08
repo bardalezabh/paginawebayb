@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+
+<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/img/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1c4f86">
+
+<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+
+{% include schema-localbusiness.html %}
+{% if page.faq %}{% include schema-faq.html faq=page.faq %}{% endif %}
+{% if page.layout == "servicio" %}{% include schema-service.html %}{% endif %}
+</head>
+<body data-whatsapp="{{ site.company.whatsapp_number }}">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+{% include icons.html %}
+{% include header.html %}
+
+<main id="main">
+{{ content }}
+</main>
+
+{% include footer.html %}
+{% include whatsapp-float.html %}
+
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>

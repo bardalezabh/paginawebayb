@@ -1,0 +1,107 @@
+---
+layout: default
+title: "Nosotros"
+permalink: /nosotros/
+description: >-
+  Conoce a AYB Technology & Services SAC, empresa peruana especializada en
+  seguridad electrónica, electricidad, cableado estructurado, fibra óptica
+  y radioenlaces desde 2023. Misión, visión e ingenieros colegiados (CIP).
+---
+
+<header class="page-hero">
+  <div class="container">
+    {% include breadcrumbs.html %}
+    <p class="kicker">Nosotros</p>
+    <h1>Un equipo técnico especializado en infraestructura de telecomunicaciones</h1>
+    <p class="hero-lead">
+      AYB Technology & Services SAC opera desde 2023, integrada por un grupo
+      profesional especializado en el desarrollo de soluciones integrales en
+      seguridad electrónica, electricidad, cableado estructurado, fibra
+      óptica y radioenlaces.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <p class="kicker">Quiénes somos</p>
+        <h2>Soluciones integrales, con las mejores marcas del mercado</h2>
+        <p>
+          Trabajamos con las mejores marcas del mercado para mejorar la
+          calidad de vida y la seguridad dentro del ambiente laboral de
+          nuestros clientes, atendiendo tanto al sector público como al
+          privado en todo el Perú.
+        </p>
+        <p>
+          Integramos en un solo equipo las especialidades que normalmente
+          requieren varios proveedores distintos: redes y fibra óptica,
+          electricidad, pozos a tierra, videovigilancia, control de acceso
+          y radioenlaces — con certificaciones que respaldan cada trabajo
+          entregado.
+        </p>
+      </div>
+      <div class="about-grid" style="grid-template-columns:1fr; gap:20px;">
+        <div class="value-card">
+          <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-team"/></svg></div>
+          <h3>Misión</h3>
+          <p>Consolidarnos como líderes en el sector público y privado a nivel nacional, desarrollando y ejecutando los proyectos, sin perder los valores por los que somos reconocidos.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-shield"/></svg></div>
+          <h3>Visión</h3>
+          <p>Brindar un servicio profesional de la mayor calidad a todos nuestros clientes, que nos identifiquen por la excelencia, el respeto a las normas y el compromiso asumido en todos los trabajos que realizamos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Nuestro respaldo</p>
+      <h2>Certificaciones y estándares que aplicamos</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-award"/></svg></div>
+        <h3>Ingenieros CIP</h3>
+        <p>Certificaciones de puesta a tierra firmadas por ingenieros electricistas colegiados y habilitados por el Colegio de Ingenieros del Perú.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-shield"/></svg></div>
+        <h3>Fluke Networks</h3>
+        <p>Certificación y medición de cobre y fibra óptica con instrumentos homologados internacionalmente.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-ground"/></svg></div>
+        <h3>Indecopi</h3>
+        <p>Mediciones de pozo a tierra siguiendo la normativa y certificación de los laboratorios autorizados.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon-circle"><svg width="26" height="26" aria-hidden="true"><use href="#icon-bolt"/></svg></div>
+        <h3>Indeci</h3>
+        <p>Instalaciones eléctricas ejecutadas bajo los estándares de seguridad exigidos por Indeci.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Nuestros equipos</p>
+      <h2>Trabajamos con marcas líderes del mercado</h2>
+      <p>Instalamos equipos y materiales de fabricantes reconocidos internacionalmente en redes, seguridad y energía.</p>
+    </div>
+    <ul class="brand-chips light">
+      {% for marca in site.data.marcas %}
+      <li>{{ marca }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% include cta-banner.html %}

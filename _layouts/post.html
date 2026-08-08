@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post-page">
+  <header class="page-hero post-hero">
+    <div class="container">
+      {% include breadcrumbs.html %}
+      <p class="kicker">Blog AYB</p>
+      <h1>{{ page.title }}</h1>
+      {% assign meses_es = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+      {% assign mes_idx = page.date | date: "%-m" | minus: 1 %}
+      <p class="post-meta">
+        <svg width="16" height="16" aria-hidden="true"><use href="#icon-clock"/></svg>
+        {{ page.date | date: "%-d" }} de {{ meses_es[mes_idx] }} de {{ page.date | date: "%Y" }}
+        {% if page.reading_time %} · {{ page.reading_time }} min de lectura{% endif %}
+      </p>
+    </div>
+  </header>
+
+  <div class="container post-layout">
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include cta-banner.html %}
+</article>

@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+description: >-
+  Artículos sobre cableado estructurado, fibra óptica, seguridad electrónica
+  y electricidad para empresas en Perú, por el equipo de AYB Technology & Services.
+---
+
+<header class="page-hero">
+  <div class="container">
+    {% include breadcrumbs.html %}
+    <p class="kicker">Blog</p>
+    <h1>Guías técnicas sobre redes, electricidad y seguridad electrónica</h1>
+    <p class="hero-lead">Contenido práctico para tomar mejores decisiones en tus proyectos de infraestructura.</p>
+  </div>
+</header>
+
+{% assign meses_es = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+<section>
+  <div class="container">
+    <div class="post-list">
+      {% for post in site.posts %}
+      {% assign mes_idx = post.date | date: "%-m" | minus: 1 %}
+      <a class="post-card" href="{{ post.url }}">
+        <span class="kicker">{{ post.date | date: "%-d" }} de {{ meses_es[mes_idx] }}, {{ post.date | date: "%Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description | truncate: 130 }}</p>
+        <span class="card-link">Leer artículo <svg width="14" height="14"><use href="#icon-arrow"/></svg></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
