@@ -1,15 +1,28 @@
 # Marcas de equipos y materiales con los que trabaja AYB Technology & Services.
-# Se listan como texto (no se reproducen logotipos de terceros sin autorización).
-- Panduit
-- Cisco
-- AMP NETCONNECT
-- Indeco (Nexans)
-- Fluke Networks
-- Cambium Networks
-- Siemon
-- Aruba (Hewlett Packard Enterprise)
-- Belden
-- Siklu
-- Hikvision
-- Toten
-- YOFC
+# Logos extraídos del brochure corporativo oficial de la empresa.
+- name: Panduit
+  logo: panduit.png
+- name: Cisco
+  logo: cisco.png
+- name: AMP NETCONNECT
+  logo: amp-netconnect.png
+- name: Indeco (Nexans)
+  logo: indeco-nexans.png
+- name: Fluke Networks
+  logo: fluke-networks.png
+- name: Cambium Networks
+  logo: cambium-networks.png
+- name: Siemon
+  logo: siemon.png
+- name: Aruba (Hewlett Packard Enterprise)
+  logo: aruba-hpe.png
+- name: Belden
+  logo: belden.png
+- name: Siklu
+  logo: siklu.png
+- name: Hikvision
+  logo: hikvision.png
+- name: Toten
+  logo: toten.png
+- name: YOFC
+  logo: yofc.png

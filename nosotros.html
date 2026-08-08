@@ -96,9 +96,9 @@ description: >-
       <h2>Trabajamos con marcas líderes del mercado</h2>
       <p>Instalamos equipos y materiales de fabricantes reconocidos internacionalmente en redes, seguridad y energía.</p>
     </div>
-    <ul class="brand-chips light">
+    <ul class="brand-logos">
       {% for marca in site.data.marcas %}
-      <li>{{ marca }}</li>
+      <li><img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50"></li>
       {% endfor %}
     </ul>
   </div>

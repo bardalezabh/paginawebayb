@@ -60,9 +60,9 @@
   <div class="footer-brands">
     <div class="container">
       <p class="footer-brands-label">Trabajamos con equipos y materiales de marcas líderes:</p>
-      <ul class="brand-chips">
+      <ul class="brand-logos compact">
         {% for marca in site.data.marcas %}
-        <li>{{ marca }}</li>
+        <li><img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50"></li>
         {% endfor %}
       </ul>
     </div>

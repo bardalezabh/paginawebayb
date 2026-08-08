@@ -150,9 +150,9 @@ description: >-
       <p class="kicker">Nuestros equipos</p>
       <h2>Trabajamos con marcas líderes del mercado</h2>
     </div>
-    <ul class="brand-chips">
+    <ul class="brand-logos">
       {% for marca in site.data.marcas %}
-      <li>{{ marca }}</li>
+      <li><img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50"></li>
       {% endfor %}
     </ul>
   </div>
