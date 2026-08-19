@@ -144,4 +144,24 @@ description: >-
   </div>
 </section>
 
+<section class="bg-light">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Nuestros clientes</p>
+      <h2>Empresas e instituciones que confían en nosotros</h2>
+    </div>
+    <ul class="brand-logos">
+      {% for cliente in site.data.clientes %}
+      <li>
+        {% if cliente.logo %}
+        <img src="/assets/img/clients/{{ cliente.logo }}" alt="{{ cliente.name }}" loading="lazy" width="140" height="50">
+        {% else %}
+        <span class="brand-text">{{ cliente.name }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
 {% include cta-banner.html %}

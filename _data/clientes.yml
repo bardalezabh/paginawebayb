@@ -1,0 +1,13 @@
+# Empresas e instituciones que han confiado en AYB Technology & Services.
+# Las marcas sin campo "logo" se muestran como texto hasta tener el archivo de imagen.
+- name: J&T Express
+  logo: jt-express.png
+- name: SUNAT
+  logo: sunat.png
+- name: Nuctech
+  logo: nuctech.png
+- name: Las Bambas
+  logo: las-bambas.png
+- name: Bantel
+  logo: bantel.png
+- name: Orocom
