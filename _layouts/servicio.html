@@ -17,6 +17,12 @@ layout: default
     </div>
   </header>
 
+  {% if page.photo %}
+  <div class="service-photo-wrap">
+    <img src="{{ page.photo }}" alt="{{ page.title }} — AYB Technology & Services" class="service-photo" loading="eager" width="1400" height="933">
+  </div>
+  {% endif %}
+
   <div class="container service-layout">
     <div class="service-content">
       {{ content }}

@@ -5,6 +5,8 @@ slug: radioenlaces
 icon: icon-radio
 order: 6
 permalink: /servicios/radioenlaces/
+photo: /assets/img/servicios/radioenlaces.jpg
+image: /assets/img/servicios/radioenlaces.jpg
 description: >-
   Instalación de radioenlaces, telefonía VoIP, radios de comunicación,
   torres, antenas y sistemas RFID en Lima y Perú. Cotiza con AYB Technology

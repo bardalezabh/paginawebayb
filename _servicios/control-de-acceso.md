@@ -5,6 +5,8 @@ slug: control-de-acceso
 icon: icon-access
 order: 5
 permalink: /servicios/control-de-acceso/
+photo: /assets/img/servicios/control-de-acceso.jpg
+image: /assets/img/servicios/control-de-acceso.jpg
 description: >-
   Instalación de control de acceso biométrico, tarjetas de proximidad,
   torniquetes y tranqueras vehiculares y peatonales en Lima y Perú.

@@ -5,6 +5,8 @@ slug: pozo-a-tierra
 icon: icon-ground
 order: 3
 permalink: /servicios/pozo-a-tierra/
+photo: /assets/img/servicios/pozo-a-tierra.jpg
+image: /assets/img/servicios/pozo-a-tierra.jpg
 description: >-
   Diseño, construcción, mantenimiento y certificación de pozos a tierra
   (SPAT) en Lima y Perú. Ohmiajes menores a 15, 10, 5, 2 y 1 ohmio.

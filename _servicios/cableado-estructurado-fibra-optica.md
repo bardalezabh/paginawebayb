@@ -5,6 +5,8 @@ slug: cableado-estructurado-fibra-optica
 icon: icon-cable
 order: 1
 permalink: /servicios/cableado-estructurado-fibra-optica/
+photo: /assets/img/servicios/cableado-estructurado-fibra-optica.jpg
+image: /assets/img/servicios/cableado-estructurado-fibra-optica.jpg
 description: >-
   Diseño, instalación y certificación de cableado estructurado UTP, fibra
   óptica, racks y datacenters en Lima y todo el Perú. Categorías 5e, 6 y 7,

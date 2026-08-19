@@ -5,6 +5,8 @@ slug: instalaciones-electricas
 icon: icon-bolt
 order: 2
 permalink: /servicios/instalaciones-electricas/
+photo: /assets/img/servicios/instalaciones-electricas.jpg
+image: /assets/img/servicios/instalaciones-electricas.jpg
 description: >-
   Instalación de cableado eléctrico, tableros de distribución, alumbrado
   industrial, UPS y tableros de transferencia automática (TTA) en Lima y

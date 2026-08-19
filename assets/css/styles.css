@@ -345,6 +345,26 @@ section { padding: 64px 0; }
 /* ==========================================================================
    Página de servicio (detalle)
    ========================================================================== */
+.service-photo-wrap {
+  max-width: var(--container);
+  margin: -40px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+.service-photo {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+@media (max-width: 720px) {
+  .service-photo-wrap { margin-top: -24px; }
+  .service-photo { max-height: 260px; }
+}
+
 .service-layout {
   display: grid; grid-template-columns: 2fr 1fr; gap: 48px;
   padding: 56px 0;
