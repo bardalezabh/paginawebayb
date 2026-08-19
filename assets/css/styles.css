@@ -207,16 +207,41 @@ section { padding: 64px 0; }
 .hero-badge svg { color: var(--blue-300); }
 
 .hero-panel {
-  background: rgba(255,255,255,.08);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   border: 1px solid rgba(255,255,255,.18);
   border-radius: var(--radius);
   padding: 28px;
-  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-lg);
+}
+.hero-panel-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  animation: heroKenburns 22s ease-in-out infinite alternate;
+}
+.hero-panel-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(165deg, rgba(10,32,58,.93), rgba(28,79,134,.88) 55%, rgba(63,143,199,.75));
+}
+@keyframes heroKenburns {
+  from { transform: scale(1) translate(0, 0); }
+  to { transform: scale(1.14) translate(-1%, -1%); }
 }
 .hero-panel h2 { color: #fff; font-size: 1.2rem; }
 .hero-panel ul { display: grid; gap: 12px; margin-top: 14px; }
 .hero-panel li { display: flex; gap: 10px; align-items: flex-start; color: rgba(255,255,255,.92); font-weight: 600; font-size: .95rem; }
 .hero-panel li svg { color: var(--blue-300); flex-shrink: 0; margin-top: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-panel-bg { animation: none; }
+}
 
 @media (max-width: 860px) {
   .hero-grid { grid-template-columns: 1fr; }
