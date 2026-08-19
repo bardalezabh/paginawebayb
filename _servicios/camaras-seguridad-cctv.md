@@ -5,6 +5,8 @@ slug: camaras-seguridad-cctv
 icon: icon-camera
 order: 4
 permalink: /servicios/camaras-seguridad-cctv/
+photo: /assets/img/servicios/camaras-seguridad-cctv.jpg
+image: /assets/img/servicios/camaras-seguridad-cctv.jpg
 description: >-
   Instalación, configuración y mantenimiento de cámaras de seguridad CCTV y
   video wall para hogares, exteriores y empresas en Lima y Perú. Monitoreo
