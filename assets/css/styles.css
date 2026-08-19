@@ -483,7 +483,7 @@ form.contact-form { display: grid; gap: 18px; }
    Footer
    ========================================================================== */
 .site-footer { background: var(--charcoal); color: #cfd6dc; padding-top: 60px; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; padding-bottom: 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; padding-top: 40px; padding-bottom: 40px; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
 
@@ -503,7 +503,7 @@ form.contact-form { display: grid; gap: 18px; }
 }
 .social-links a:hover { background: var(--blue-600); }
 
-.footer-brands { border-top: 1px solid rgba(255,255,255,.08); padding: 30px 0; margin-top: 10px; }
+.footer-brands { border-bottom: 1px solid rgba(255,255,255,.08); padding-bottom: 30px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 20px 0; }
 .footer-bottom p { margin: 0; font-size: .85rem; color: #8b95a0; text-align: center; }
 

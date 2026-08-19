@@ -1,4 +1,21 @@
 <footer class="site-footer">
+  <div class="footer-brands">
+    <div class="container">
+      <p class="footer-brands-label">Trabajamos con equipos y materiales de marcas líderes:</p>
+      <ul class="brand-logos compact">
+        {% for marca in site.data.marcas %}
+        <li>
+          {% if marca.logo %}
+          <img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50">
+          {% else %}
+          <span class="brand-text">{{ marca.name }}</span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
   <div class="container footer-grid">
     <div class="footer-brand">
       <img src="/assets/img/logo.png" alt="{{ site.company.short_name }}" width="170" height="95">
@@ -53,23 +70,6 @@
           <svg width="18" height="18" aria-hidden="true"><use href="#icon-clock"/></svg>
           <span>{{ site.company.hours }}</span>
         </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-brands">
-    <div class="container">
-      <p class="footer-brands-label">Trabajamos con equipos y materiales de marcas líderes:</p>
-      <ul class="brand-logos compact">
-        {% for marca in site.data.marcas %}
-        <li>
-          {% if marca.logo %}
-          <img src="/assets/img/brands/{{ marca.logo }}" alt="{{ marca.name }}" loading="lazy" width="140" height="50">
-          {% else %}
-          <span class="brand-text">{{ marca.name }}</span>
-          {% endif %}
-        </li>
-        {% endfor %}
       </ul>
     </div>
   </div>
